@@ -8,17 +8,8 @@
   ],
   "routes": [
     {
-      "src": "/api/players/:playerName",
+      "src": "/(.*)",
       "dest": "/index.js",
-      "methods": ["GET", "OPTIONS"],
-      "headers": {
-        "Access-Control-Allow-Origin": "*"
-      }
-    },
-    {
-      "src": "/api/playersdetail/:id",
-      "dest": "/index.js",
-      "methods": ["GET", "OPTIONS"],
       "headers": {
         "Access-Control-Allow-Origin": "*"
       }
