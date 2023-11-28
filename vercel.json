@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+      { 
+        "src": "index.js", 
+        "use": "@vercel/node" 
+      }
+  ],
+  "routes": [
+    {
+      "src": "/api/players/:playerName",
+      "dest": "/index.js",
+      "methods": ["GET", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "src": "/api/playersdetail/:id",
+      "dest": "/index.js",
+      "methods": ["GET", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    }
+  ]
+}
